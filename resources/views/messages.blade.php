@@ -1,3 +1,5 @@
+<link rel="stylesheet" href="{{asset('../css/style.css')}}">
+
 <!--extend layout master.blade.php -->
 
 @extends('layouts/master')
