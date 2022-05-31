@@ -8,16 +8,14 @@
 ts value for section title to "Mini Twitter" (section content is used in messages.blade.php) -->
 @section('content')
  
-<h2>Message Details:</h2>
- 
-section('content')
+
 <h2>Message Details:</h2>
  
 <h3>{{$message->title}}</h3>
 <p>{{$message->content}}</p>
 @endsection
  
-@
 
 
-@endsection
+
+

@@ -1,5 +1,29 @@
 body {
-background-color: rgb(141, 187, 209);
-color: black;
+background-color: rgb(94, 161, 248);
+color: rgb(255, 255, 255);
+text-align: center;
+font-family: monospace;
+font-size: 20px;
 
 }
+
+.logo{
+max-width: 100%;    
+padding-top: 3%;
+
+
+}
+
+
+li, ul, b {
+list-style: none;
+
+}
+
+button, input{
+background-color: pink;
+font-weight: bold;
+
+
+}
+

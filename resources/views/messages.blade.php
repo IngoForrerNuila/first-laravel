@@ -1,17 +1,18 @@
-<link rel="stylesheet" href="{{asset('../css/style.css')}}">
+<link rel="stylesheet" class="logo" href="{{asset('../css/style.css')}}">
 
 <!--extend layout master.blade.php -->
 
 @extends('layouts/master')
 
 <!--sets value for section title to "Mini Twitter" (section title is used in messages.blade.php) -->
-@section('title', 'Mini Twitter')
+@section('title', '')
+<img class="logo" src="{{ asset('img/mini-twitter-logo.png') }}">
 
 <!--starts section content, defines some html for section content and end section content
 ts value for section title to "Mini Twitter" (section content is used in messages.blade.php) -->
 @section('content')
 
-<h2>Recent messages:</h2>
+<h2>RECENT MESSAGES</h2>
 
 <!-- loops through the $messages, that this blade template
    gets from MessageController.php. for each element of the loop which
@@ -25,8 +26,18 @@ ts value for section title to "Mini Twitter" (section content is used in message
 
       @csrf
       @method('delete')
-      <button type="submit">Delete</button>
+      <button type="submit">DELETE U__U</button>
+      <!-- <a href="/message/{{$message->id}}">EDIT</a> -->
+      
    </form>
+
+   <form>
+    <a href="/message/{{$message->id}}">
+        <input type="button" value="EDIT ^__^">
+    </a>
+   </form>
+   
+   
    {{$message->created_at->diffForHumans()}}
 </li>
 @endforeach
@@ -43,6 +54,9 @@ ts value for section title to "Mini Twitter" (section content is used in message
    <button type="submit">Submit</button>
 
 </form>
-<h2>Recent messages:</h2>
+
+
+
+
 
 @endsection
