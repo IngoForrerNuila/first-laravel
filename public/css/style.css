@@ -9,8 +9,12 @@ font-size: 20px;
 
 .logo{
 max-width: 100%;    
-padding-top: 3%;
+padding-top: 1%;
 
+}
+
+.slogan {
+color: black;
 
 }
 
@@ -23,7 +27,6 @@ list-style: none;
 button, input{
 background-color: pink;
 font-weight: bold;
-
 
 }
 

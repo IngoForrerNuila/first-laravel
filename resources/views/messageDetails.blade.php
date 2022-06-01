@@ -1,8 +1,11 @@
+<link rel="stylesheet" class="logo" href="{{asset('../css/style.css')}}">
+
 <!--extend layout master.blade.php -->
 @extends('layouts.master')
  
 <!--sets value for section title to "Mini Twitter" (section title is used in messages.blade.php) -->
-@section('title', 'Mini Twitter')
+@section('title', '')
+<img class="logo" src="{{ asset('img/mini-twitter-logo.png') }}">
  
 <!--starts section content, defines some html for section content and end section content
 ts value for section title to "Mini Twitter" (section content is used in messages.blade.php) -->
