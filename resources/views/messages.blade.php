@@ -12,7 +12,21 @@
 ts value for section title to "Mini Twitter" (section content is used in messages.blade.php) -->
 @section('content')
 
-<h2>RECENT MESSAGES</h2>
+<h3 class="slogan">WE WANNA KNOW WHAT YOU'RE THINKING,<br>
+THERE ARE SOME THINGS YOU CAN'T HIDE <span style='font: size 35px;'>&#129297;</span>
+</h3>
+
+<h2>Share your thoughts here &#128151; </h2>
+
+<form action="/create" method="post">
+   <input type="text" name="title" placeholder="Title">
+   <input type="text" name="content" placeholder="Content">
+   <!-- this blade directive is necessary for all form posts somewhere in between
+       the form tags -->
+   @csrf
+   <button type="submit">POST</button>
+
+</form>
 
 <!-- loops through the $messages, that this blade template
    gets from MessageController.php. for each element of the loop which
@@ -26,37 +40,20 @@ ts value for section title to "Mini Twitter" (section content is used in message
 
       @csrf
       @method('delete')
-      <button type="submit">DELETE U__U</button>
+      <button type="submit">DELETE</button>
       <!-- <a href="/message/{{$message->id}}">EDIT</a> -->
       
-   </form>
-
-   <form>
-    <a href="/message/{{$message->id}}">
-        <input type="button" value="EDIT ^__^">
+      <a href="/message/{{$message->id}}">
+        <input type="button" value="EDIT">
     </a>
+
    </form>
-   
-   
+ 
+      
    {{$message->created_at->diffForHumans()}}
 </li>
 @endforeach
 </ul>
-
-<h2>Create new message: </h2>
-
-<form action="/create" method="post">
-   <input type="text" name="title" placeholder="Title">
-   <input type="text" name="content" placeholder="Content">
-   <!-- this blade directive is necessary for all form posts somewhere in between
-       the form tags -->
-   @csrf
-   <button type="submit">Submit</button>
-
-</form>
-
-
-
 
 
 @endsection
