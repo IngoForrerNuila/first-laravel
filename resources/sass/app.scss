@@ -7,17 +7,25 @@
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
 
-body {
-    background-color: rgb(94, 161, 248);
-    color: rgb(255, 255, 255);
-    text-align: center;
-    font-family: monospace;
-    font-size: 20px;
+    $primary-color: rgb(94, 161, 248);
+    $text-color: rgb(255, 255, 255);
+    $general-font: monospace;
+    $size: 20px;
+    $text-margin: center;
+    $responsivness: 100%; // :V JEJEJEJE 
+
+    body {
+    background: $primary-color;
+    color: $text-color;
+    font-family: $general-font;
+    font-size: $size;
+    text-align: $text-margin;
+
     
     }
     
     .logo{
-    max-width: 100%;    
+    max-width: $responsivness;    
     padding-top: 1%;
     
     }
